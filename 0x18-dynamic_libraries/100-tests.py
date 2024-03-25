@@ -14,8 +14,8 @@ cops.sub.restype = ctypes.c_int
 cops.mul.argtypes = [ctypes.c_int, ctypes.c_int]
 cops.mul.restype = ctypes.c_int
 
-cops.div.argtypes = [ctypes.c_int, ctypes.c_int]
-cops.div.restype = ctypes.c_int
+cops.divide.argtypes = [ctypes.c_int, ctypes.c_int]
+cops.divide.restype = ctypes.c_int
 
 cops.mod.argtypes = [ctypes.c_int, ctypes.c_int]
 cops.mod.restype = ctypes.c_int
@@ -28,5 +28,5 @@ b = random.randint(-111, 111)
 print("{} + {} = {}".format(a, b, cops.add(a, b)))
 print("{} - {} = {}".format(a, b, cops.sub(a, b)))
 print("{} x {} = {}".format(a, b, cops.mul(a, b)))
-print("{} / {} = {}".format(a, b, cops.div(a, b)))
+print("{} / {} = {}".format(a, b, cops.divide(a, b)))
 print("{} % {} = {}".format(a, b, cops.mod(a, b)))
