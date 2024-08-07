@@ -1,22 +1,21 @@
 #include "search_algos.h"
 /**
- * recursive_binary - binary search implementation
- * @array: array to search
- * @low: lowest index to begin searching
- * @high :highest index of array
- * @s_value: value to search
- * Return: index of s_value or
- * -1 if s_value not in array
+ * recursive_binary - imple,ebts the binary search
+ * @array: pointer to the element to the element to search
+ * @low: lowest index of the array
+ * @high : highest index of  the array
+ * @s_value: the value to search
+ * Return: index of s_value else, -1 if s_value not in array
  */
 int recursive_binary(int *array, size_t low, size_t high, int s_value)
 {
-	size_t medium, i;
+	size_t medium, j;
 
 	printf("Searching in array: ");
-	for (i = low; i <= high; i++)
+	for (j = low; j <= high; j++)
 	{
-		printf("%d", array[i]);
-		if (i < high)
+		printf("%d", array[j]);
+		if (j < high)
 			printf(", ");
 	}
 	printf("\n");
@@ -32,13 +31,11 @@ int recursive_binary(int *array, size_t low, size_t high, int s_value)
 	return (-1);
 }
 /**
- * exponential_search - searches for a value in a sorted array of integers
- * using the Exponential search algorithm
- * @array: array to search through
- * @size: size of array
- * @value: value to sarch for
- * Return: -1 if value is not find
- * else returns index of value in array
+ * exponential_search - performs an exponential search for a value
+ * @array: pointer to the first element
+ * @size: number of elements
+ * @value: value to search
+ * Return: index of the element, else -1 if null
  */
 int exponential_search(int *array, size_t size, int value)
 {
